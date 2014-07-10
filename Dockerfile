@@ -20,5 +20,8 @@ RUN mkdir /var/run/sshd
 RUN install -d /etc/supervisor ; install -d /etc/supervisor/conf.d
 ADD supervisord.conf /etc/supervisor/supervisord.conf
 
+ADD run.sh /opt/mybot/run.sh
+RUN chmod a+x /opt/mybot/run.sh
+
 EXPOSE 22
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
