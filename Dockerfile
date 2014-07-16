@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get -y upgrade
 
 ## hubot
-RUN apt-get update && apt-get -y install git build-essential supervisor nodejs nodejs-dev nodejs-legacy node-gyp npm redis-server
+RUN apt-get -y install git build-essential supervisor nodejs nodejs-dev nodejs-legacy node-gyp npm redis-server
 RUN npm install bower -g
 RUN npm install -g hubot coffee-script hubot-xmpp
 RUN cd /opt ; hubot --create mybot
