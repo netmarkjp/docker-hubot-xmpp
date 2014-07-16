@@ -14,6 +14,7 @@ RUN cd /opt/mybot && npm install hubot-xmpp@0.1.11 cron@1.0.0
 ## sshd
 RUN apt-get -y install openssh-server
 RUN echo 'root:p@ssw0rd' |chpasswd
+RUN sed -i.bak 's/^PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN mkdir /var/run/sshd
 
 ## supervisor
