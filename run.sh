@@ -3,4 +3,4 @@
 
 cd "`dirname $0`"
 
-exec ./bin/hubot -a xmpp -n __HUBOT_NAME__ -l __HUBOT_ALIAS__
+exec ./bin/hubot ${HUBOT_ARGS:- -a xmpp -n mybotname -l mybotalias}

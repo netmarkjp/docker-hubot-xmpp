@@ -11,7 +11,7 @@ RUN npm install bower -g
 RUN npm install -g hubot coffee-script hubot-xmpp
 RUN cd /opt ; hubot --create mybot
 RUN cd /opt/mybot && yes | rm -f scripts/*
-RUN cd /opt/mybot && npm install hubot-xmpp@0.1.11 cron@1.0.0
+RUN cd /opt/mybot && npm install hubot-xmpp@0.1.11 cron@1.0.0 hubot-hipchat --save
 
 ## sshd
 RUN apt-get -y install openssh-server
